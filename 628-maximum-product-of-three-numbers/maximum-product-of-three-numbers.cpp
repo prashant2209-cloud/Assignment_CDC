@@ -2,8 +2,8 @@ class Solution {
 public:
     int maximumProduct(vector<int>& nums) {
         sort(nums.begin(),nums.end());
-        int maxi=max(nums.back() * nums[nums.size() - 2] * nums[nums.size() - 3],
-            nums.back() * nums.front() * nums[1]);
+        int n=nums.size();
+        int maxi=max(nums[0]*nums[1]*nums[n-1],nums[n-1]*nums[n-2]*nums[n-3]);
         return maxi;
     }
 };
